@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>TP 2 : Horloge en js</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="horloge.js"></script>
+  </head>
+  <body>
+	<p>
+		<div name="horloge">
+			<span id="heures"><strong>00</strong></span>
+			:
+			<span id="minutes"><strong>00</strong></span>
+			:
+			<span id="secondes"><strong>00</strong></span>
+			<!--:
+			<span id="millisecondes"><strong>00</strong></span> -->
+	</p>
+	
+	<p>
+		<div>
+			<table>
+				<tbody id="alarmes">
+					<tr id="row0">
+						<td>
+							<input type="checkbox" name="check_alarme" id="check_alarm" onclick="ischecked(this.parentNode.parentNode.childNodes[1].childNodes[1])">
+							<input type="number" min="0" max="23" name="set_hour" size="40" id="hours_alarm">
+							<input type="number" min="0" max="59" name="set_minute" size="40" id="minutes_alarm">
+							<input type="text" name="nom_alarm" id="name_alarm">
+							<select name ="sounds" id="sounds">
+								<option value="sound1" id="sound1">Sound1</option>
+								<option value="sound2" id="sound2">Sound2</option>
+							<input type=button value="-" name="retrait_alarme" onclick="retirer_alarme(this.parentNode.parentNode.id)">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</p>
+	<p>
+			<input type=button value="+" name="ajout_alarme" onclick="ajouter_alarme()">
+	</p>
+  </body>
+</html>
